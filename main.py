@@ -11,8 +11,7 @@ API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDyIYfOYkOMWlQJqi-WSDzulf0Qys9xemc")
 genai.configure(api_key=API_KEY)
 
 # Using Gemini Flash Lite or fallback to standard 1.5 flash
-model = genai.GenerativeModel("gemini-2.0-flash-lite-preview-02-05")
-
+model = genai.GenerativeModel("gemini-1.5-flash")
 class ImagePayload(BaseModel):
     image_base64: str
 
