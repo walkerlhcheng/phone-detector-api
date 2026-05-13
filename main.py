@@ -7,7 +7,7 @@ import google.generativeai as genai
 app = FastAPI(title="Phone Detector API")
 
 # 1. Configure Gemini API Prefers Environment Variable for safety
-API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDyIYfOYkOMWlQJqi-WSDzulf0Qys9xemc")
+API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
 
 # Using Gemini Flash Lite or fallback to standard 1.5 flash
